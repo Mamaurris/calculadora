@@ -1,0 +1,95 @@
+<html>
+
+<head>
+<title>Estrella</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no"> 
+</head>
+    
+<body>
+<h1>Modo estrella</h1>
+   
+<textarea type="text" placeholder="Introduce un texto" id="dato"></textarea><br><br>
+<div align="center">
+<button onclick="guardar()" id="guardar">Guardar</button>
+<button onclick="verDato()" id="ver">Ver</button>
+<button onclick="regresar()" id="estrella">Regresar</button>
+</div> 
+
+</body>  
+</html>
+
+
+<script>
+        function guardar(){
+            dato= document.getElementById('dato').value;
+            localStorage.setItem('datoGuardado',dato);
+            alert('¡Dato guardado exitosamente!')
+        }
+        function verDato(){
+            dato= localStorage.getItem('datoGuardado');
+            document.getElementById('dato').innerHTML=dato;
+        }
+    
+    function regresar(){
+         window.location.assign('calculadora.html');
+    }
+</script>
+
+<style>
+    #dato{
+    background: white;
+    height: 140px;
+    width: 100%;
+    color: orange;
+    font-size: 3em;
+    }
+    
+    #guardar{
+    background: grey;   
+    color: white;
+    font-size: 2em;
+    float: left;
+    }
+    
+    #estrella{
+        background: grey;   
+    color: white;
+    font-size: 2em;
+   float: right;
+    }
+    
+    #ver{
+    background: grey;   
+    color: white;
+    font-size: 2em;
+    float: center;
+    }
+    h1{
+    font-size-adjust: auto;
+    color:blue;
+    font-size: 6em;   
+    float: ;
+    }
+    
+    body{
+        background: black;
+    }
+    
+    #guardar:active{
+    margin-top: 10px !important;
+    box-shadow: 0px 3px 0px 0px darkgreen;
+    }
+    
+     #ver:active{
+    margin-top: 10px !important;
+    box-shadow: 0px 3px 0px 0px darkgreen;
+    }
+    
+     #estrella:active{
+    margin-top: 10px !important;
+    box-shadow: 0px 3px 0px 0px darkgreen;
+    }
+    
+
+</style>

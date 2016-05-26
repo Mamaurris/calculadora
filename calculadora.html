@@ -1,0 +1,290 @@
+<html>
+
+<head>
+<title>Calculadora</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no"> 
+</head>
+    
+<body>    
+<form name="calculadora">
+<input type="textfield" name="ans" value="" id="res">  
+
+<button type="button" id="masmenos" onClick="document.calculadora.ans.value=eval(document.calculadora.ans.value)*(-1)">+/-</button>
+<button type="button" id="par1" onClick="document.calculadora.ans.value+='('">(</button>
+<button type="button" id="par2" onClick="document.calculadora.ans.value+=')'">)</button>
+<button type="button" id="estrella" onClick="registro()">☆</button>
+<button type="button" id="siete" onClick="document.calculadora.ans.value+='7'">7</button>
+<button type="button" id="ocho" onClick="document.calculadora.ans.value+='8'">8</button>
+<button type="button" id="nueve" onClick="document.calculadora.ans.value+='9'">9</button>
+<button type="button" id="diagonal" onClick="document.calculadora.ans.value+='/'">/</button>   
+<button type="button" id="cuatro" onClick="document.calculadora.ans.value+='4'">4</button>
+<button type="button" id="cinco" onClick="document.calculadora.ans.value+='5'">5</button>
+<button type="button" id="seis" onClick="document.calculadora.ans.value+='6'">6</button>
+<button type="button" id="por" onClick="document.calculadora.ans.value+='*'">x</button>
+<button type="button" id="uno" onClick="document.calculadora.ans.value+='1'">1</button>
+<button type="button" id="dos" onClick="document.calculadora.ans.value+='2'">2</button>
+<button type="button" id="tres" onClick="document.calculadora.ans.value+='3'">3</button>
+<button type="button" id="menos" onClick="document.calculadora.ans.value+='-'">-</button>    
+<button type="button" id="cero" onClick="document.calculadora.ans.value+='0'">0</button>
+<button type="button" id="punto" onClick="document.calculadora.ans.value+='.'">.</button>
+<button type="button" id="porciento" onClick="document.calculadora.ans.value+='%'">%</button>
+<button type="button" id="mas" onClick="document.calculadora.ans.value+='+'">+</button>
+<button type="reset" id="c">C</button>
+<button type="button" id="igual" onClick="document.calculadora.ans.value=eval(document.calculadora.ans.value)" >=</button>
+</form>
+    
+</body> 
+</html>
+
+<script>
+    function registro(){
+        res=document.getElementById('res').value;
+    localStorage.setItem('res',res);
+         if(res=="0007"){
+        window.location.assign('estrella.html');
+        }else{
+        alert('Numero incorrecta');
+       }
+    }
+</script>
+
+<style>
+    #res{
+    background: black;
+    height: 140px;
+    width: 100%;
+    color: white;
+    font-size: 5em;
+    text-align: right;
+    border-color: black;
+    }
+    
+    #cero{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em;  
+    border-color: black;
+    float:left;
+    }
+    
+    #uno{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em;  
+    border-color: black;
+    float:left;
+    } 
+    
+    #dos{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em;  
+    border-color: black;
+    float:left;
+    } 
+    
+    #tres{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em;  
+    border-color: black;
+    float:left;
+    }
+    
+    #cuatro{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em;
+    border-color: black;
+    float:left;
+    }
+    
+    #cinco{
+    width: 25%;
+    height: 70px;
+    background:rga(192,192,192);
+    color: black;
+    font-size: 1em;
+    border-color: black;
+    float:left;
+    }
+    
+    #seis{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em;  
+    border-color: black;
+    float:left;
+    } 
+    
+    #siete{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em; 
+    border-color: black;
+    float:left;
+    }
+    
+    #ocho{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em;  
+    border-color: black;
+    float:left;
+    }
+    
+    #nueve{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em;
+    border-color: black;
+    float:left;
+    }
+    
+    #masmenos{
+    width: 25%;
+    height: 70px;
+    background:gray;
+    color: white;
+    border-color: black;
+    font-size: 1em;
+    top:100%;
+    float: left;
+    }
+    
+    #par1{
+    width: 25%;
+    height: 70px;
+    background:gray;
+    color: white;
+    font-size: 1em;  
+    border-color: black;
+    top:100%;
+    float:left;
+    }
+    
+    #par2{
+    width: 25%;
+    height: 70px;
+    background:gray;
+    color: white;
+    font-size: 1em; 
+    border-color: black;
+    top:100%;
+    float:left;
+    }
+    
+    #estrella{
+    width: 25%;
+    height: 70px;
+    background: gray;
+    color: white;
+    font-size: 1.5em; 
+    border-color: black;
+    top:100%;
+    float:left;
+    }
+    
+    #diagonal{
+    width: 25%;
+    height: 70px;
+    background: blue;
+    color: whitesmoke;
+    font-size: 1em;
+    border-color: black;
+    float:left;
+    }
+    
+    #por{
+    width: 25%;
+    height: 70px;
+    background: blue;
+    color: white;
+    font-size: 1em;  
+    border-color: black;
+    float:left;
+    }
+
+    #menos{
+    width: 25%;
+    height: 70px;
+    background: blue;
+    color: white;
+    font-size: 1em;  
+    border-color: black;
+    float: left;
+    }
+    
+    #punto{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em;  
+    border-color: black;
+    float:left;
+    }
+    
+    #porciento{
+    width: 25%;
+    height: 70px;
+    background: rga(192,192,192);
+    color: black;
+    font-size: 1em;  
+    border-color: black;
+    float:left;
+    }
+    
+    #mas{
+    width: 25%;
+    height: 140px;
+    background: blue;
+    color: white;
+    font-size: 1em;  
+    border-color: black;
+    float:right;
+    }
+    
+    #igual{
+    width: 50%;
+    height: 70px;
+    background: orange;
+    color: white;
+    font-size: 1em;  
+    border-color: black;
+    float:left;
+    } 
+    
+    #c{
+    width: 25%;
+    height: 70px;
+    background: red;
+    color: white;
+    font-size: 1em; 
+    border-color: black;
+    float:left;
+    }       
+</style>
+    
+   
+
+
